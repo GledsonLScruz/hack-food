@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marketFragment">
+
+    <fragment
+        android:id="@+id/receitaFragment"
+        android:name="com.example.ifood.ReceitaFragment"
+        android:label="fragment_receita"
+        tools:layout="@layout/fragment_receita" >
+        <action
+            android:id="@+id/action_receitaFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.example.ifood.MarketFragment"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_market" >
+        <action
+            android:id="@+id/action_marketFragment_to_bagFragment"
+            app:destination="@id/bagFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bagFragment"
+        android:name="com.example.ifood.BagFragment"
+        android:label="fragment_bag"
+        tools:layout="@layout/fragment_bag" >
+        <action
+            android:id="@+id/action_bagFragment_to_receitaFragment"
+            app:destination="@id/receitaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="com.example.ifood.DetalhesFragment"
+        android:label="fragment_detalhes"
+        tools:layout="@layout/fragment_detalhes" >
+        <action
+            android:id="@+id/action_detalhesFragment_to_ultimoFragment"
+            app:destination="@id/ultimoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ultimoFragment"
+        android:name="com.example.ifood.UltimoFragment"
+        android:label="fragment_ultimo"
+        tools:layout="@layout/fragment_ultimo" />
+</navigation>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ifood</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="receita">1- Em uma panela funda, acrescente o leite condensado, a margarina e o achocolatado (ou 4 colheres de sopa de chocolate em pó).\n2 - Cozinhe em fogo médio e mexa até que o brigadeiro comece a desgrudar da panela.\n3- Deixe esfriar e faça pequenas bolas com a mão passando a massa no chocolate granulado.</string>
+</resources>

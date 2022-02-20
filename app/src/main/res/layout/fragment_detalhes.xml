@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detalhesFragment"
+            type="com.example.ifood.DetalhesFragment" />
+        <variable
+            name="viewModel"
+            type="com.example.ifood.ViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".DetalhesFragment"
+            android:background="@color/vermelhoifood">
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="30dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Surpreenda-me"
+                    android:textSize="40sp"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    />
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ifood_sorriso"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/top"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/vermelhoifood"
+                    app:cardCornerRadius="30dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/brigas"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:src="@drawable/brigadeiro"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/titulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/brigas"
+                            android:text="Brigadeiro"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:paddingStart="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="15dp"
+                            />
+                        <TextView
+                            android:id="@+id/first"
+                            app:layout_constraintTop_toBottomOf="@id/titulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="Leite condensado"
+                            android:textSize="20dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/ifoodb3"
+                            />
+                        <CheckBox
+                            app:layout_constraintStart_toEndOf="@id/first"
+                            app:layout_constraintTop_toTopOf="@id/first"
+                            app:layout_constraintBottom_toBottomOf="@id/first"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/ifood3"
+                            android:checked="true"
+                            android:onCheckedChanged="@{() -> viewModel.setprice(4.50)}"
+                            />
+
+                        <TextView
+                            android:id="@+id/s"
+                            app:layout_constraintTop_toBottomOf="@id/first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="15dp"
+                            android:text="Margarina"
+                            android:textSize="20dp"
+                            android:textColor="@color/ifoodb3"
+                            />
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/s"
+                            app:layout_constraintStart_toStartOf="@id/s"
+                            android:text="Compre em Big Bom preço\nPor R$ 5,70"
+                            android:textColor="@color/vermelhoifood"/>
+                        <CheckBox
+                            app:layout_constraintStart_toEndOf="@id/s"
+                            app:layout_constraintTop_toTopOf="@id/s"
+                            app:layout_constraintBottom_toBottomOf="@id/s"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/ifood3"
+                            android:onCheckedChanged="@{() -> viewModel.setprice(5.70)}"
+                            />
+
+                        <TextView
+                            android:id="@+id/t"
+                            app:layout_constraintTop_toBottomOf="@id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="Achocolatado"
+                            android:textSize="20dp"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/ifoodb3"
+                            />
+                        <CheckBox
+                            app:layout_constraintStart_toEndOf="@id/t"
+                            app:layout_constraintTop_toTopOf="@id/t"
+                            app:layout_constraintBottom_toBottomOf="@id/t"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/ifood3"
+                            android:onCheckedChanged="@{() -> viewModel.setprice(6.20)}"
+                            />
+                        <TextView
+                            android:id="@+id/desc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/t"
+                            app:layout_constraintStart_toStartOf="@id/t"
+                            android:text="Compre em Big Bom preço\nPor R$ 6,20"
+                            android:textColor="@color/vermelhoifood"/>
+                        <TextView
+                            android:id="@+id/q"
+                            app:layout_constraintTop_toBottomOf="@id/desc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="15dp"
+                            android:text="Chocolate Granulado"
+                            android:textSize="20dp"
+                            android:textColor="@color/ifoodb3"
+                            />
+
+                        <TextView
+                            android:id="@+id/desc3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/q"
+                            app:layout_constraintStart_toStartOf="@id/q"
+                            android:text="Compre em Big Bom preço\nPor R$ 7,20"
+                            android:textColor="@color/vermelhoifood" />
+
+                        <CheckBox
+                            app:layout_constraintStart_toEndOf="@id/q"
+                            app:layout_constraintTop_toTopOf="@id/q"
+                            app:layout_constraintBottom_toBottomOf="@id/q"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/ifood3"
+                            android:onCheckedChanged="@{() -> viewModel.setprice(7.20)}"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total R$ "
+                            android:textSize="20dp"
+                            app:layout_constraintTop_toBottomOf="@id/desc3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="2dp"
+                            app:layout_constraintEnd_toStartOf="@id/valor"
+                            android:textColor="@color/ifoodb3"/>
+
+                        <TextView
+                            android:id="@+id/valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.price.toString()}"
+                            android:textSize="20dp"
+                            app:layout_constraintTop_toBottomOf="@id/desc3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@color/ifoodb3"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Finalizar Compra"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:padding="20dp"
+                            android:backgroundTint="@color/vermelhoifood"
+                            app:layout_constraintTop_toBottomOf="@id/valor"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:onClick="@{() -> detalhesFragment.gonextscreen()}"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

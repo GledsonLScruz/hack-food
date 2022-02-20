@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ultimoFragment"
+            type="com.example.ifood.UltimoFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UltimoFragment"
+        android:gravity="center"
+        android:background="@color/ifood9"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/vermelhoifood"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_check_24"
+                app:tint="@color/white"
+                android:layout_margin="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ifoodb3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido:"
+            android:textSize="25dp"
+            android:textColor="@color/ifoodb3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#0594"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04/03/2022 • 15:32"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            android:textColor="@color/ifoodb3"/>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/ifoodb3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previsão"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-medium"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Minutos"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            android:textColor="@color/ifoodb3"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ifood"
+            app:tint="@color/vermelhoifood"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</layout>

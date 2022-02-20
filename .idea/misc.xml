@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_bag.xml" value="0.24305555555555555" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_detalhes.xml" value="0.24054982817869416" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_market.xml" value="0.25" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_mercado.xml" value="0.24054982817869416" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_receita.xml" value="0.24305555555555555" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_resultado.xml" value="0.23026315789473684" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_sacola.xml" value="0.22" />
+        <entry key="..\:/Users/gleds/Desktop/Ifood/app/src/main/res/layout/fragment_ultimo.xml" value="0.23026315789473684" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
